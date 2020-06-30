@@ -35,7 +35,9 @@ exports[`App matches the snapshot 1`] = `
     <li>
       First
     </li>
-    <li>
+    <li
+      data-test-id="specific-li"
+    >
       Second
     </li>
     <li>

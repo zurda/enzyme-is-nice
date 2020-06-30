@@ -63,6 +63,10 @@ describe(
       expect(wrapper.find('ol').hasClass('me')).toBe(true)
       // text() 
       expect(wrapper.find('a').text()).toBe('Learn React')
+      // when you can't reliably select an element using another way 
+      // use data-test-id
+      const specificLi = wrapper.find('[data-test-id="specific-li"]');
+      expect(specificLi.text()).toContain('Second')
       // tests might affect each other if they're using the same dom 
       // so it's importnat to unmount
       wrapper.unmount()
@@ -84,6 +88,9 @@ describe(
       expect(wrapper.find('h2').text()).toBe('')
       input.simulate('change', {currentTarget: {value: 'Me'}})
       expect(wrapper.find('h2').text()).toBe('Me')
+    })
+    it('on input change, title changes text', () => {
+     
     })
   }
 )

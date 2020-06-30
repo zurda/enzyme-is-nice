@@ -27,7 +27,7 @@ function App() {
       <Title text="some title" />
       <ul>
         <li>First</li>
-        <li>Second</li>
+        <li data-test-id="specific-li">Second</li>
         <li>Third</li>
       </ul>
       <ol className="me">
